@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz_login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{%  static 'users/style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="login-form-wrap">
+  <h2>Login</h2>
+  <form id="login-form" method='POST'>
+    <p>
+      {% csrf_token %}
+    <input type="text" id="username" name="Email" placeholder="Email" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="password" id="username" name="password" placeholder="New password" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="submit">
+    </p>
+  </form>
+  
+</body>
+</html>
